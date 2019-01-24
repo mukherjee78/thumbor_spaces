@@ -27,7 +27,6 @@ setup(
     package_dir = {"thumbor_spaces": "thumbor_spaces"},
     requires=["thumbor"],
     long_description = """\
-Thumbor is a smart imaging service. It enables on-demand crop, resizing and flipping of images.
-This module provides a result storage for spaces Cloudfiles by using the Pyrax library
+Provides a Thumbor result storage adapter for Spaces that stores files in DigitalOcean.
 """
 )
