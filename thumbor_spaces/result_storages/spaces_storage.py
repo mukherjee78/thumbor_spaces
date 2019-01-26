@@ -28,7 +28,7 @@ class Storage(BaseStorage):
                                 endpoint_url='https://'+self.context.config.SPACES_ENDPOINT+'.digitaloceanspaces.com',
                                 aws_access_key_id=self.context.config.SPACES_KEY,
                                 aws_secret_access_key=self.context.config.SPACES_SECRET)
-        client.upload_fileobj(buff, self.context.config.SPACES_BUCKET, key)
+        client.upload_fileobj(buff, self.context.config.SPACES_BUCKET, key, ExtraArgs={'ACL':self.context.config.SPACES_ACL})
 
         if callback is None:
             def callback(key):

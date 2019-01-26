@@ -28,3 +28,5 @@ For more info on result storage: https://thumbor.readthedocs.io/en/latest/result
     SPACES_SECRET='XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
     SPACES_BUCKET='your-bucket-name'
+
+    SPACES_ACL='public'
