@@ -8,6 +8,7 @@ from tornado.concurrent import return_future
 import boto3
 from botocore.client import Config
 from io import BytesIO
+import re
 
 class Storage(BaseStorage):
     def __init__(self, context):
@@ -58,4 +59,6 @@ class Storage(BaseStorage):
 
     def get_key_name(self, path):
         path_segments = path.lstrip('/').split("/")
-        return '/'.join(['result_storage', path_segments[0], path_segments[-1:][0]])
+        key = '/'.join(['result_storage', path_segments[0], path_segments[-1:][0]])
+        key = re.sub('[^0-9a-zA-Z]+', '_', key)
+        return key
