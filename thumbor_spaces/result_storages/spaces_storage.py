@@ -59,6 +59,6 @@ class Storage(BaseStorage):
 
     def get_key_name(self, path):
         path_segments = path.lstrip('/').split("/")
-        key = '/'.join(['result_storage', path_segments[0], path_segments[-1:][0]])
-        key = re.sub('[^0-9a-zA-Z]+', '_', key)
+        key = re.sub('[^0-9a-zA-Z\/]+', '_', path_segments[0])
+        key = '/'.join(['result_storage', key, path_segments[-1:][0]])
         return key
