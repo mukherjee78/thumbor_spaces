@@ -6,7 +6,7 @@ Provides a [Thumbor](https://github.com/thumbor/thumbor) result storage adapter 
 
 ### Installing
 
-Thumbor-Spaces can be easily installed using `pip install thumbor_spaces`.
+Thumbor-Spaces can be easily installed using `pip install thumbor_spaces=='2.0'`.
 
 ### Configuration
 
