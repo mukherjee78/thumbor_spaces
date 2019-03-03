@@ -86,7 +86,7 @@ class Storage(BaseStorage):
     def get_key_name(self, path):
         path_segments = path.lstrip('/').split("/")
         key = re.sub('[^0-9a-zA-Z]+', '_', path_segments[0])
-        key = '/'.join(['result_storage', key, path_segments[-1:][0]])
+        key = '/'.join([self.context.config.SPACES_RESULT_FOLDER, key, path_segments[-1:][0]])
         return key
 
     def get_content_type(self, buff, name):

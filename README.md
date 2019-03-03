@@ -6,7 +6,7 @@ Provides a [Thumbor](https://github.com/thumbor/thumbor) result storage adapter 
 
 ### Installing
 
-Thumbor-Spaces can be easily installed using `pip install thumbor_spaces=='2.0'`.
+Thumbor-Spaces can be easily installed using `pip install thumbor_spaces=='2.1'`.
 
 ### Configuration
 
@@ -30,3 +30,5 @@ For more info on result storage: https://thumbor.readthedocs.io/en/latest/result
     SPACES_BUCKET='your-bucket-name'
 
     SPACES_ACL='public'
+
+    SPACES_RESULT_FOLDER='result_storage'
