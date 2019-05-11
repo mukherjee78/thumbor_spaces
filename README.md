@@ -18,6 +18,7 @@ For more info on result storage: https://thumbor.readthedocs.io/en/latest/result
 /etc/thumbor.conf
 
     RESULT_STORAGE = 'thumbor_spaces.result_storages.spaces_storage'
+    LOADER = 'thumbor_spaces.loaders.spaces_loader'
 
     SPACES_REGION='xxx'
 
@@ -32,3 +33,5 @@ For more info on result storage: https://thumbor.readthedocs.io/en/latest/result
     SPACES_ACL='public'
 
     SPACES_RESULT_FOLDER='result_storage'
+
+    SPACES_LOADER_FOLDER='storage'
