@@ -20,7 +20,7 @@ def load(context, path, callback):
     logger.debug(path)
     logger.debug(context.request.url)
     chker1 = context.config.SPACES_BUCKET+'.'+context.config.SPACES_ENDPOINT+'.digitaloceanspaces.com'
-    chker2 = '/storage/'
+    chker2 = '/'+context.config.SPACES_LOADER_FOLDER+'/'
     if chker1 not in context.request.url and chker2 not in context.request.url:
         logger.debug(path)
         http_loader.load(context, path, callback)
@@ -44,7 +44,7 @@ def load(context, path, callback):
 
 def get_key_name(context, path):
     path_segments = path.lstrip('/').split("/")
-    storage_index = index_containing_substring(path_segments, 'storage')
+    storage_index = index_containing_substring(path_segments, context.config.SPACES_LOADER_FOLDER)
     return '/'.join(path_segments[storage_index:])
 
 def index_containing_substring(the_list, substring):

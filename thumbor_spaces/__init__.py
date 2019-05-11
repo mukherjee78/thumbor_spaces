@@ -16,4 +16,4 @@ except ImportError:
     #Thumbor isn't installed yet
     pass
 
-__version__ = "2.2"
+__version__ = "2.21"
